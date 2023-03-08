@@ -17,7 +17,7 @@ public class RealtHomePage extends BasePage {
     // Переменные с адресами элементов с которыми мы работаем
     private final By countRooms = By.id("rooms");
     private final By option2Rooms = By.xpath("//select[@id='rooms']/option[@value=2]");
-    private final By serchBtn = By.xpath("//div[@id='residentialInputs']//a[text()='Найти']");
+    private final By searchBtn = By.xpath("//div[@id='residentialInputs']//a[text()='Найти']");
 
     //Метод для логики поиска элемента и клика
     public RealtHomePage enterCountRooms(){
@@ -28,7 +28,7 @@ public class RealtHomePage extends BasePage {
     }
     // Метод для кнопки "Найти" изолированный если понадобятся другие данные из прошлого метода
     public RealtHomePage enterSearch(){
-        WebElement btnFind = driver.findElement(serchBtn);
+        WebElement btnFind = driver.findElement(searchBtn);
         waitElementIsVisible(btnFind).click();
 
         return this;
